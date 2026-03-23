@@ -31,14 +31,20 @@ import ReviewCard from '../components/ReviewCard.astro';
           <p class="note-signature">&mdash; Yash Kothari</p>
         </div>
         <div class="note-author">
-          <p class="note-bio">
-            Indian-American founder and writer based in New York. Forbes contributor, with work published in The Wall Street Journal and The New York Times. Wharton grad, Y Combinator alum. Writes about hospitality through the lens of feeling, presence, and the Indian tradition of <em>atithi devo bhava</em>.
-          </p>
-          <p class="note-links">
-            <a href="https://www.linkedin.com/in/kothariy/" target="_blank" rel="noopener">LinkedIn</a>
-            <span class="link-sep">&middot;</span>
-            <a href="/media">Media &amp; Contact</a>
-          </p>
+          <div class="note-author-row">
+            <img src="/images/yash-headshot.jpg" alt="Yash Kothari" class="note-headshot" />
+            <div class="note-author-text">
+              <p class="note-author-name">Yash Kothari</p>
+              <p class="note-bio">
+                Indian-American founder and writer based in New York. Forbes contributor, with work published in The Wall Street Journal and The New York Times. Wharton grad, Y Combinator alum. Writes about hospitality through the lens of feeling, presence, and the Indian tradition of <em>atithi devo bhava</em>.
+              </p>
+              <p class="note-links">
+                <a href="https://www.linkedin.com/in/kothariy/" target="_blank" rel="noopener">LinkedIn</a>
+                <span class="link-sep">&middot;</span>
+                <a href="/media">Media &amp; Contact</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -229,6 +235,32 @@ import ReviewCard from '../components/ReviewCard.astro';
     margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--color-warm-sand);
+  }
+
+  .note-author-row {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .note-headshot {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  .note-author-text {
+    flex: 1;
+  }
+
+  .note-author-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.3em;
+    line-height: 1.3;
   }
 
   .note-bio {
