@@ -6,11 +6,14 @@ import ReviewCard from '../components/ReviewCard.astro';
 <Base title="Stay Nivas — Where You Dwell Matters">
   <!-- Hero -->
   <section class="hero">
-    <div class="container">
-      <h1 class="hero-title">
-        <span class="hero-stay">Stay</span> <span class="hero-nivas">Nivas</span>
-      </h1>
-      <p class="hero-tagline">Where you dwell matters.</p>
+    <div class="hero-image">
+      <img src="/images/andaz-papagayo/beach-sunset.jpg" alt="Sunset over the Pacific at Peninsula Papagayo" />
+      <div class="hero-overlay">
+        <h1 class="hero-title">
+          <span class="hero-stay">Stay</span> <span class="hero-nivas">Nivas</span>
+        </h1>
+        <p class="hero-tagline">Where you dwell matters.</p>
+      </div>
     </div>
   </section>
 
@@ -18,27 +21,27 @@ import ReviewCard from '../components/ReviewCard.astro';
   <section class="founders-note">
     <div class="container">
       <div class="note-content">
-        <p>
-          I stopped trusting hotel reviews the day I realized they were all answering the wrong question. Thread count, pool temperature, breakfast buffet variety. Useful, sure. But not why I remember the places I remember.
-        </p>
-        <p>
-          The hotels that stayed with me did something else. They changed the rhythm of my day. They made me notice things I normally walk past. They understood something about rest that goes deeper than a good mattress.
-        </p>
-        <p>
-          Stay Nivas is my attempt to write about that. Not what a hotel has, but what it does to you. The reviews here are personal, sometimes imperfect, and always honest. If a place earned my attention, I'll tell you why. If it didn't, I'll tell you that too.
-        </p>
+        <div class="note-letter">
+          <p>
+            I stopped trusting hotel reviews the day I realized they were all answering the wrong question. Thread count, pool temperature, breakfast buffet variety. Useful, sure. But not why I remember the places I remember.
+          </p>
+          <p>
+            The hotels that stayed with me did something else. They changed the rhythm of my day. They made me notice things I normally walk past. They understood something about rest that goes deeper than a good mattress.
+          </p>
+          <p>
+            Stay Nivas is my attempt to write about that. Not what a hotel has, but what it does to you. The reviews here are personal, sometimes imperfect, and always honest. If a place earned my attention, I'll tell you why. If it didn't, I'll tell you that too.
+          </p>
+          <p class="note-signature">&mdash; Yash Kothari</p>
+        </div>
         <div class="note-author">
-          <div class="note-author-info">
-            <p class="note-sign">Yash Kothari</p>
-            <p class="note-bio">
-              Indian-American founder and writer based in New York. Forbes contributor, with work published in The Wall Street Journal and The New York Times. Wharton grad, Y Combinator alum. Writes about hospitality through the lens of feeling, presence, and the Indian tradition of <em>atithi devo bhava</em>.
-            </p>
-            <p class="note-links">
-              <a href="https://www.linkedin.com/in/yashkothari/" target="_blank" rel="noopener">LinkedIn</a>
-              <span class="link-sep">&middot;</span>
-              <a href="/media">Media &amp; Contact</a>
-            </p>
-          </div>
+          <p class="note-bio">
+            Indian-American founder and writer based in New York. Forbes contributor, with work published in The Wall Street Journal and The New York Times. Wharton grad, Y Combinator alum. Writes about hospitality through the lens of feeling, presence, and the Indian tradition of <em>atithi devo bhava</em>.
+          </p>
+          <p class="note-links">
+            <a href="https://www.linkedin.com/in/yashkothari/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="link-sep">&middot;</span>
+            <a href="/media">Media &amp; Contact</a>
+          </p>
         </div>
       </div>
     </div>
@@ -153,7 +156,7 @@ import ReviewCard from '../components/ReviewCard.astro';
       <div class="newsletter-inner">
         <h2 class="newsletter-heading">Stay in touch</h2>
         <p class="newsletter-copy">New reviews delivered to your inbox. No spam, no affiliate links, just honest writing about places worth knowing.</p>
-        <form class="newsletter-form" action="https://formsubmit.co/yash@staynivas.com" method="POST">
+        <form class="newsletter-form" action="https://formsubmit.co/kothari.s.yash@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New Stay Nivas subscriber" />
           <input type="hidden" name="_template" value="basic" />
           <input type="hidden" name="_captcha" value="false" />
@@ -169,15 +172,42 @@ import ReviewCard from '../components/ReviewCard.astro';
 
 <style>
   .hero {
-    padding: 6rem 0 3rem;
+    position: relative;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.45));
     text-align: center;
+    padding: 2rem;
   }
 
   .hero-title {
     font-family: var(--font-serif);
-    font-size: clamp(3rem, 8vw, 5rem);
+    font-size: clamp(3.5rem, 10vw, 6rem);
     letter-spacing: 0.02em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.15em;
+    color: white;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
   }
 
   .hero-stay { font-weight: 400; }
@@ -186,8 +216,9 @@ import ReviewCard from '../components/ReviewCard.astro';
   .hero-tagline {
     font-family: var(--font-serif);
     font-style: italic;
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    color: var(--color-slate);
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 1px 10px rgba(0,0,0,0.3);
   }
 
   .founders-note {
@@ -199,14 +230,29 @@ import ReviewCard from '../components/ReviewCard.astro';
   .note-content {
     max-width: 600px;
     margin: 0 auto;
+  }
+
+  .note-letter {
     position: relative;
     padding-left: 1.5rem;
     border-left: 3px solid var(--color-saffron);
   }
 
-  .note-content > p {
-    font-size: 0.95rem;
-    line-height: 1.8;
+  .note-letter p {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.9;
+    color: var(--color-charcoal);
+  }
+
+  .note-signature {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
     color: var(--color-charcoal);
   }
 
@@ -214,19 +260,6 @@ import ReviewCard from '../components/ReviewCard.astro';
     margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--color-warm-sand);
-  }
-
-  .note-author-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .note-sign {
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 0.25em;
-    line-height: 1.4;
   }
 
   .note-bio {
