@@ -117,10 +117,10 @@ const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
 <style>
   .review-hero { width: 100%; max-height: 70vh; overflow: hidden; }
   .review-hero img { width: 100%; height: 70vh; object-fit: cover; }
-  .review-header { padding: 3rem 0 2rem; text-align: center; }
-  .review-location { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-slate); margin-bottom: 0.75rem; }
+  .review-header { padding: 3rem 0 2rem; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .review-location { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-slate); margin-bottom: 0.75rem; max-width: none; }
   .review-header h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 500; margin-bottom: 0.25em; }
-  .review-subtitle { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--color-slate); margin-bottom: 1rem; }
+  .review-subtitle { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--color-slate); margin-bottom: 1rem; max-width: none; }
   .review-meta-bar { display: flex; justify-content: center; gap: 2rem; align-items: center; font-size: 0.85rem; }
   .review-rating { color: var(--color-saffron); font-size: 1.1rem; letter-spacing: 0.1em; }
   .review-date { color: var(--color-slate); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
