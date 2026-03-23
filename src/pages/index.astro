@@ -27,10 +27,17 @@ import ReviewCard from '../components/ReviewCard.astro';
         <p>
           Stay Nivas is my attempt to write about that. Not what a hotel has, but what it does to you. The reviews here are personal, sometimes imperfect, and always honest. If a place earned my attention, I'll tell you why. If it didn't, I'll tell you that too.
         </p>
-        <p class="note-sign">
-          Yash Kothari<br />
-          <span class="note-title">Founder, Stay Nivas</span>
-        </p>
+        <div class="note-author">
+          <div class="note-author-info">
+            <p class="note-sign">Yash Kothari</p>
+            <p class="note-bio">
+              Indian-American founder and writer based in New York. Wharton grad, Y Combinator alum, two startups built. Writes about hospitality through the lens of feeling, presence, and the Indian tradition of <em>atithi devo bhava</em>.
+            </p>
+            <p class="note-links">
+              <a href="https://www.linkedin.com/in/yashkothari/" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -42,11 +49,11 @@ import ReviewCard from '../components/ReviewCard.astro';
 
       <ReviewCard
         title="Hyatt Regency The Churchill"
-        subtitle="The small touches that make a big hotel feel personal"
+        subtitle="Service that outpaces its own interiors"
         location="London, England"
         date="February 2026"
-        rating={5}
-        summary="The Churchill doesn't dazzle. It does something harder: it makes a family with a toddler feel completely at ease in Mayfair. Juan and Guillaume set the tone before we arrived, and every interaction after that confirmed it. The Regency Suite was generous, housekeeping was impeccable, and the service throughout was the kind that treats families as the point, not a tolerated exception."
+        rating={4}
+        summary="The Churchill doesn't dazzle. It does something harder: it makes a family with a toddler feel completely at ease in Mayfair. Juan and Guillaume set the tone before we arrived, and the service throughout was exceptional. What holds it back is the interiors, which feel a step behind the team that works in them. A property where the people are better than the building."
         image="/images/hyatt-churchill/hero.jpg"
         imageAlt="London skyline at dusk, Mayfair"
         slug="hyatt-regency-the-churchill-london"
@@ -69,8 +76,8 @@ import ReviewCard from '../components/ReviewCard.astro';
         subtitle="The quiet authority of a hotel that has nothing left to prove"
         location="Mumbai, India"
         date="2024"
-        rating={5}
-        summary="A staycation at Nariman Point where Marine Drive becomes your morning view and the staff know your room number before you tell them. Shradha and Akshit at the front desk embodied the Oberoi way: warm, precise, and personal. Chef Sahil's vegetarian cooking was the real thing, not an afterthought. In a city that rarely lets you forget it's there, The Oberoi creates genuine quiet."
+        rating={4}
+        summary="A staycation at Nariman Point where Marine Drive becomes your morning view and the staff know your room number before you tell them. Shradha, Akshit, and Chef Sahil embodied the Oberoi way. The service and vegetarian dining are exceptional, but the physical product feels a half-step behind newer competitors. Authority earned through decades, even if the interiors haven't kept pace."
         image="/images/the-oberoi-mumbai/hero.jpg"
         imageAlt="The Oberoi Mumbai at Nariman Point"
         slug="the-oberoi-mumbai"
@@ -102,23 +109,35 @@ import ReviewCard from '../components/ReviewCard.astro';
 
       <ReviewCard
         title="Ca' di Dio"
-        subtitle="One night that felt like a full stay"
+        subtitle="Beautiful design, but Venice isn't the place to feel squeezed"
         location="Venice, Italy"
         date="2023"
-        rating={5}
-        summary="Proof that one night is enough to know a hotel is exceptional. A restored 15th-century hospice with Patricia Urquiola interiors that honor Venice without imitating it. Christophe, Filippo, and Matteo made us feel like week-long guests in a single evening. In a city where hotels often coast on location, Ca' di Dio has its own point of view."
+        rating={3}
+        summary="The Patricia Urquiola interiors are genuinely striking and the staff, led by Christophe, were warm and attentive. But the room was on the smaller side, and the property felt optimized for occupancy rather than experience. In a city where your hotel room should be a refuge from the crowds, Ca' di Dio's sizing left us feeling like one of many."
         image="/images/ca-di-dio/hero.jpg"
         imageAlt="Venice waterfront at golden hour"
         slug="ca-di-dio-venice"
       />
 
       <ReviewCard
+        title="Faarufushi Maldives"
+        subtitle="A honeymoon that the hotel nearly ruined before it began"
+        location="Raa Atoll, Maldives"
+        date="December 2019"
+        rating={2}
+        summary="The spa was exceptional, the staff phenomenal, and the overwater villa looked exactly like the brochure. But a four-hour seaplane delay followed by management's refusal to take responsibility revealed a property where the front-line team delivers five-star service inside a three-star management structure. For a honeymoon, that gap is unforgivable."
+        image="/images/faarufushi-maldives/hero.jpg"
+        imageAlt="Overwater villas in the Maldives at sunset"
+        slug="faarufushi-maldives"
+      />
+
+      <ReviewCard
         title="Sujan Rajmahal Palace"
-        subtitle="Where heritage is a living thing, not a museum exhibit"
+        subtitle="A wedding night in a palace that earned its grandeur"
         location="Jaipur, India"
-        date="2022"
+        date="December 2019"
         rating={5}
-        summary="We came for a private dinner and left knowing we'd return for a full stay. Rajmahal Palace carries the weight of a maharaja's residence but the Sujan team has made it feel alive rather than preserved. The vegetarian courses were exceptional, and the hospitality from Arun and Yashpal embodied mehman-nawazi: the genuine Indian pleasure in hosting."
+        summary="Our wedding night in the Maharani Suite, with its own dining room, pool, and a bed that required footstools. Butler Neeraj made every request effortless. They set up a couples massage in the Maharaja Suite because no treatment room would do. Rose petals, champagne, and the kind of hospitality that treats a celebration as sacred. We chose Rajmahal over Rambagh. No regrets."
         image="/images/sujan-rajmahal/hero.jpg"
         imageAlt="Sujan Rajmahal Palace exterior at dusk"
         slug="sujan-rajmahal-jaipur"
@@ -164,23 +183,47 @@ import ReviewCard from '../components/ReviewCard.astro';
     border-left: 3px solid var(--color-saffron);
   }
 
-  .note-content p {
+  .note-content > p {
     font-size: 0.95rem;
     line-height: 1.8;
     color: var(--color-charcoal);
   }
 
-  .note-sign {
-    margin-top: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 0;
-    line-height: 1.5;
+  .note-author {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-warm-sand);
   }
 
-  .note-title {
+  .note-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .note-sign {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.25em;
+    line-height: 1.4;
+  }
+
+  .note-bio {
     font-size: 0.85rem;
+    line-height: 1.6;
     color: var(--color-slate);
-    font-weight: 400;
+    margin-bottom: 0.5em;
+  }
+
+  .note-links {
+    margin-bottom: 0;
+  }
+
+  .note-links a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
   .reviews { padding: 0 0 4rem; }
