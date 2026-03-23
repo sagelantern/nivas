@@ -1,0 +1,101 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const rating = 5;
+const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+---
+
+<Base title="Sujan Rajmahal Palace, Jaipur — Stay Nivas" description="A private dinner at Jaipur's most storied palace hotel, where hospitality runs deeper than heritage.">
+  <article class="review">
+    <div class="review-hero">
+      <img src="/images/sujan-rajmahal/hero.jpg" alt="Sujan Rajmahal Palace exterior at dusk, Jaipur" />
+    </div>
+
+    <div class="container">
+      <header class="review-header">
+        <p class="review-location">Jaipur, India</p>
+        <h1>Sujan Rajmahal Palace</h1>
+        <p class="review-subtitle">Where heritage is a living thing, not a museum exhibit</p>
+        <div class="review-meta-bar">
+          <span class="review-rating" aria-label="5 out of 5 stars">{stars}</span>
+          <span class="review-date">2022</span>
+        </div>
+      </header>
+
+      <aside class="review-metadata">
+        <div class="meta-item"><span class="meta-label">Property</span> Rajmahal Palace RAAS Jaipur</div>
+        <div class="meta-item"><span class="meta-label">Location</span> Shivaji Nagar, Jaipur, Rajasthan</div>
+        <div class="meta-item"><span class="meta-label">Experience</span> Private Dinner</div>
+        <div class="meta-item"><span class="meta-label">Traveled</span> Family</div>
+        <div class="meta-item"><span class="meta-label">Would Return</span> Yes</div>
+      </aside>
+
+      <div class="review-body">
+        <h2>Arrival</h2>
+        <p>
+          There's a particular feeling you get when you walk into a place that has been hosting people for longer than most countries have existed. It's not intimidation, though the scale of Rajmahal could easily produce that. It's more like the building knows what it's doing. The walls have absorbed enough arrivals that the ritual is effortless.
+        </p>
+        <p>
+          Rajmahal Palace was the residence of the Maharaja of Jaipur. It still carries that weight, but the Sujan team has done something difficult: they've made it feel alive rather than preserved. You walk through rooms decorated in jewel tones and hand-painted murals, and instead of feeling like you're in a museum, you feel like you've been invited to someone's impossibly grand home.
+        </p>
+
+        <h2>Nourishment</h2>
+        <p>
+          We came for a private dinner, and it became the kind of evening you measure other evenings against. The setting was outdoors, under the Jaipur sky, with the palace lit behind us. But the meal wasn't relying on the backdrop. The vegetarian courses were exceptional: each dish rooted in Rajasthani tradition but composed with a precision that showed real culinary thinking, not just recipe following.
+        </p>
+        <p>
+          What makes Rajmahal's food different from the "royal Indian dining" you get at lesser palace hotels is confidence. There was no need to oversell the heritage angle with gold leaf or theatrical presentations. The food was simply, deeply good. The kind of good that comes from a kitchen that has been feeding people well for generations and hasn't forgotten how.
+        </p>
+
+        <figure class="review-image">
+          <img src="/images/sujan-rajmahal/dining.jpg" alt="Private dinner setting at Rajmahal Palace" />
+          <figcaption>The palace lit at dusk. Some settings don't need much explanation.</figcaption>
+        </figure>
+
+        <h2>The People</h2>
+        <p>
+          Arun and Yashpal and the whole team made the evening. Not in the way that a good waiter makes dinner smooth, but in the way that a thoughtful host makes you feel like the most important people in the room. There's a word in Hindi, "mehman-nawazi," that captures it: a hospitality that comes from genuine pleasure in hosting, not professional obligation.
+        </p>
+        <p>
+          This is something Indian hospitality, when it's real, does better than anywhere else in the world. The best palace hotels in Rajasthan understand that service isn't a transaction. It's an expression of culture. At Rajmahal, you feel that in every interaction. Nobody is performing for a tip or a review. They're doing what the place has always done: taking care of people who've walked through the door.
+        </p>
+
+        <h2>Would You Return?</h2>
+        <p>
+          We left knowing we'd be back for a proper stay. One evening was enough to understand that Rajmahal is a rare thing: a heritage property that honors its history without being trapped by it. The palace is extraordinary, but it's the people who make it special.
+        </p>
+        <p>
+          This is for anyone who wants to experience Jaipur beyond the tourist circuit. For anyone who loves Indian hospitality at its most generous. And for anyone who believes that the best hotels aren't just places you sleep, but places that change the texture of your day.
+        </p>
+      </div>
+
+      <div class="review-back">
+        <a href="/">&larr; All Reviews</a>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .review-hero { width: 100%; max-height: 70vh; overflow: hidden; }
+  .review-hero img { width: 100%; height: 70vh; object-fit: cover; }
+  .review-header { padding: 3rem 0 2rem; text-align: center; }
+  .review-location { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-slate); margin-bottom: 0.75rem; }
+  .review-header h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 500; margin-bottom: 0.25em; }
+  .review-subtitle { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--color-slate); margin-bottom: 1rem; }
+  .review-meta-bar { display: flex; justify-content: center; gap: 2rem; align-items: center; font-size: 0.85rem; }
+  .review-rating { color: var(--color-saffron); font-size: 1.1rem; letter-spacing: 0.1em; }
+  .review-date { color: var(--color-slate); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+  .review-metadata { max-width: 600px; margin: 0 auto 3rem; padding: 1.5rem; background: rgba(212, 197, 169, 0.15); border-radius: 4px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 2rem; font-size: 0.85rem; }
+  .meta-label { display: block; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-slate); margin-bottom: 0.15em; }
+  .review-body { max-width: 650px; margin: 0 auto; }
+  .review-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; margin: 3rem 0 1rem; color: var(--color-charcoal); }
+  .review-body h2:first-child { margin-top: 0; }
+  .review-body p { font-size: 1rem; line-height: 1.8; }
+  .review-image { margin: 2.5rem -2rem; }
+  .review-image img { width: calc(100% + 4rem); max-width: none; aspect-ratio: 16 / 10; object-fit: cover; }
+  .review-image figcaption { font-size: 0.8rem; color: var(--color-slate); margin-top: 0.5rem; font-style: italic; padding: 0 2rem; }
+  .review-back { max-width: 650px; margin: 4rem auto 0; padding-top: 2rem; border-top: 1px solid var(--color-warm-sand); }
+  .review-back a { font-size: 0.9rem; font-weight: 500; }
+  @media (max-width: 640px) { .review-metadata { grid-template-columns: 1fr; } .review-image { margin: 2rem -1.5rem; } .review-image img { width: calc(100% + 3rem); } .review-image figcaption { padding: 0 1.5rem; } }
+</style>

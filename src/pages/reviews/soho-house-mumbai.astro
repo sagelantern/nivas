@@ -1,0 +1,110 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const rating = 5;
+const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+---
+
+<Base title="Soho House Mumbai — Stay Nivas" description="A babymoon in Juhu where rooftop views, Cecconi's Italian, and members' club warmth made Mumbai feel like it was putting on a show just for us.">
+  <article class="review">
+    <div class="review-hero">
+      <img src="/images/soho-house-mumbai/hero.jpg" alt="Mumbai skyline at dusk from Juhu" />
+    </div>
+
+    <div class="container">
+      <header class="review-header">
+        <p class="review-location">Mumbai, India</p>
+        <h1>Soho House Mumbai</h1>
+        <p class="review-subtitle">The rooftop where Mumbai finally sits still</p>
+        <div class="review-meta-bar">
+          <span class="review-rating" aria-label="5 out of 5 stars">{stars}</span>
+          <span class="review-date">January 2024</span>
+        </div>
+      </header>
+
+      <aside class="review-metadata">
+        <div class="meta-item"><span class="meta-label">Property</span> Soho House Mumbai</div>
+        <div class="meta-item"><span class="meta-label">Location</span> Juhu Tara Road, Mumbai</div>
+        <div class="meta-item"><span class="meta-label">Room</span> House Room</div>
+        <div class="meta-item"><span class="meta-label">Traveled</span> Couple (Babymoon)</div>
+        <div class="meta-item"><span class="meta-label">Nights</span> 3</div>
+        <div class="meta-item"><span class="meta-label">Would Return</span> Yes</div>
+      </aside>
+
+      <div class="review-body">
+        <h2>Arrival</h2>
+        <p>
+          Mumbai doesn't do calm. The city's default mode is sensory overload, and most hotels either try to insulate you from it or surrender to it entirely. Soho House does something smarter: it gives you a perch above it. The property sits in Juhu, the neighborhood where Bollywood lives and breathes, and from the moment you step off the street and into the building, the volume drops just enough.
+        </p>
+        <p>
+          This is a members' club that happens to have hotel rooms, and that identity shapes everything. The common spaces feel lived-in rather than staged. The furniture looks like someone chose it because they liked it, not because it matched a mood board. There's an ease to the place that most luxury hotels in Mumbai try hard for and miss.
+        </p>
+
+        <h2>The Space</h2>
+        <p>
+          Our room was the epitome of comfort without excess. Every detail felt thoughtfully designed: spacious, beautifully decorated, and equipped with everything we could need. The bed was excellent. The lighting was warm. The amenities struck the right balance between premium and practical.
+        </p>
+        <p>
+          But the real space at Soho House is the rooftop. The panoramic views of the city and the Arabian Sea were the backdrop for our entire stay. In a city where skyline views are usually accompanied by construction noise and traffic honking, the rooftop felt like a private agreement between you and Mumbai that both of you would behave for a few hours.
+        </p>
+
+        <figure class="review-image">
+          <img src="/images/soho-house-mumbai/rooftop.jpg" alt="Rooftop pool and lounge area overlooking Mumbai" />
+          <figcaption>The rooftop. Mumbai's chaos becomes scenery when you're high enough above it.</figcaption>
+        </figure>
+
+        <h2>Nourishment</h2>
+        <p>
+          Cecconi's, the Italian restaurant downstairs, was a genuine highlight. The cuisine was exquisite, and as vegetarians in Mumbai, we were genuinely impressed by the range. Italian menus tend to be generous with vegetarian options by default, but Cecconi's went further: each dish felt intentional, not like a meat course with the protein removed.
+        </p>
+        <p>
+          The room service deserves special mention. Prompt, courteous, and always with a smile. On a babymoon, when you sometimes just want to eat in your room in your robe and not talk to anyone, the quality of room service becomes disproportionately important. Soho House understood that.
+        </p>
+
+        <h2>Stillness</h2>
+        <p>
+          We came for a babymoon, and the property seemed to understand what that meant without us having to spell it out. Not every hotel gets the difference between "vacation" and "we need a few days to just be." The pace here matched ours. Nobody pushed experiences or activities. The rooftop pool existed. The restaurant existed. The room existed. And that was enough.
+        </p>
+        <p>
+          There's something particular about experiencing Mumbai from the right hotel. The city is always performing, always on, and the gift a good property gives you is the ability to engage with that energy on your own terms. Soho House nailed it. We could step into the city when we wanted and retreat into quiet when we didn't.
+        </p>
+
+        <h2>Would You Return?</h2>
+        <p>
+          Without hesitation. Soho House Mumbai has set a benchmark in the city for a specific kind of hospitality: the kind that feels like a friend's beautiful apartment rather than a hotel. The members' club DNA shows in the best way. It's not trying to impress you. It's trying to make you comfortable. And those are very different things.
+        </p>
+        <p>
+          For couples and solo travelers who want Mumbai without the sensory assault. For anyone who appreciates Soho House's particular mix of design, food, and unpretentious luxury. And for anyone spending time in Juhu who wants the Arabian Sea as their evening companion.
+        </p>
+      </div>
+
+      <div class="review-back">
+        <a href="/">&larr; All Reviews</a>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .review-hero { width: 100%; max-height: 70vh; overflow: hidden; }
+  .review-hero img { width: 100%; height: 70vh; object-fit: cover; }
+  .review-header { padding: 3rem 0 2rem; text-align: center; }
+  .review-location { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-slate); margin-bottom: 0.75rem; }
+  .review-header h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 500; margin-bottom: 0.25em; }
+  .review-subtitle { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--color-slate); margin-bottom: 1rem; }
+  .review-meta-bar { display: flex; justify-content: center; gap: 2rem; align-items: center; font-size: 0.85rem; }
+  .review-rating { color: var(--color-saffron); font-size: 1.1rem; letter-spacing: 0.1em; }
+  .review-date { color: var(--color-slate); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+  .review-metadata { max-width: 600px; margin: 0 auto 3rem; padding: 1.5rem; background: rgba(212, 197, 169, 0.15); border-radius: 4px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 2rem; font-size: 0.85rem; }
+  .meta-label { display: block; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-slate); margin-bottom: 0.15em; }
+  .review-body { max-width: 650px; margin: 0 auto; }
+  .review-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; margin: 3rem 0 1rem; color: var(--color-charcoal); }
+  .review-body h2:first-child { margin-top: 0; }
+  .review-body p { font-size: 1rem; line-height: 1.8; }
+  .review-image { margin: 2.5rem -2rem; }
+  .review-image img { width: calc(100% + 4rem); max-width: none; aspect-ratio: 16 / 10; object-fit: cover; }
+  .review-image figcaption { font-size: 0.8rem; color: var(--color-slate); margin-top: 0.5rem; font-style: italic; padding: 0 2rem; }
+  .review-back { max-width: 650px; margin: 4rem auto 0; padding-top: 2rem; border-top: 1px solid var(--color-warm-sand); }
+  .review-back a { font-size: 0.9rem; font-weight: 500; }
+  @media (max-width: 640px) { .review-metadata { grid-template-columns: 1fr; } .review-image { margin: 2rem -1.5rem; } .review-image img { width: calc(100% + 3rem); } .review-image figcaption { padding: 0 1.5rem; } }
+</style>

@@ -41,15 +41,75 @@ import ReviewCard from '../components/ReviewCard.astro';
       <h2 class="section-heading">Reviews</h2>
 
       <ReviewCard
+        title="Hyatt Regency The Churchill"
+        subtitle="The small touches that make a big hotel feel personal"
+        location="London, England"
+        date="February 2026"
+        rating={5}
+        summary="The Churchill doesn't dazzle. It does something harder: it makes a family with a toddler feel completely at ease in Mayfair. Juan and Guillaume set the tone before we arrived, and every interaction after that confirmed it. The Regency Suite was generous, housekeeping was impeccable, and the service throughout was the kind that treats families as the point, not a tolerated exception."
+        image="/images/hyatt-churchill/hero.jpg"
+        imageAlt="London skyline at dusk, Mayfair"
+        slug="hyatt-regency-the-churchill-london"
+      />
+
+      <ReviewCard
         title="Andaz Peninsula Papagayo"
         subtitle="Where the jungle decides what kind of guest you'll be"
         location="Guanacaste, Costa Rica"
-        date="March 2026"
-        rating={4}
-        summary="The Andaz Papagayo doesn't greet you so much as absorb you. You drive through miles of dry tropical forest, past howler monkeys and security gates, and arrive at an open-air lobby where the Pacific announces itself before the front desk does. This is a property that understood its assignment: get out of nature's way, then make you comfortable while it works on you. Not everything lands perfectly, but what it gets right, it gets deeply right."
+        date="November 2024"
+        rating={5}
+        summary="Five nights for a babymoon that set a new standard. The Andaz doesn't announce itself; it lets the Pacific and the dry tropical forest do that. What set it apart was the wellness program, genuinely woven into the property's identity, and a team led by Henrique, Paola, and Manolo who made hospitality feel personal rather than transactional. Even surpassed the nearby Four Seasons."
         image="/images/andaz-papagayo/hero.jpg"
-        imageAlt="View of Culebra Bay from the Andaz Papagayo resort through tropical foliage"
+        imageAlt="View of Culebra Bay from the Andaz Papagayo through tropical foliage"
         slug="andaz-peninsula-papagayo"
+      />
+
+      <ReviewCard
+        title="Soho House Mumbai"
+        subtitle="The rooftop where Mumbai finally sits still"
+        location="Mumbai, India"
+        date="January 2024"
+        rating={5}
+        summary="A babymoon in Juhu where the members' club DNA shaped everything for the better. The rooftop views of the city and the Arabian Sea set the backdrop, Cecconi's delivered genuinely excellent vegetarian Italian, and the room service was prompt and warm. Soho House understood the difference between vacation and 'we need a few days to just be' without us having to explain it."
+        image="/images/soho-house-mumbai/hero.jpg"
+        imageAlt="Mumbai skyline at dusk from Juhu"
+        slug="soho-house-mumbai"
+      />
+
+      <ReviewCard
+        title="The Beekman"
+        subtitle="A lobby that remembers New York"
+        location="New York, USA"
+        date="2023"
+        rating={5}
+        summary="A staycation that cleared the high bar of being worthwhile for New Yorkers. The nine-story Victorian atrium is stunning, but it's the consistency of taste throughout, from the rooms to the restaurants to the elevators, that makes The Beekman more than a pretty lobby. Lauren, Justin, and Alex set the service tone before we even arrived."
+        image="/images/the-beekman/hero.jpg"
+        imageAlt="The Beekman Hotel's Victorian atrium"
+        slug="the-beekman-new-york"
+      />
+
+      <ReviewCard
+        title="Ca' di Dio"
+        subtitle="One night that felt like a full stay"
+        location="Venice, Italy"
+        date="2023"
+        rating={5}
+        summary="Proof that one night is enough to know a hotel is exceptional. A restored 15th-century hospice with Patricia Urquiola interiors that honor Venice without imitating it. Christophe, Filippo, and Matteo made us feel like week-long guests in a single evening. In a city where hotels often coast on location, Ca' di Dio has its own point of view."
+        image="/images/ca-di-dio/hero.jpg"
+        imageAlt="Venice waterfront at golden hour"
+        slug="ca-di-dio-venice"
+      />
+
+      <ReviewCard
+        title="Sujan Rajmahal Palace"
+        subtitle="Where heritage is a living thing, not a museum exhibit"
+        location="Jaipur, India"
+        date="2022"
+        rating={5}
+        summary="We came for a private dinner and left knowing we'd return for a full stay. Rajmahal Palace carries the weight of a maharaja's residence but the Sujan team has made it feel alive rather than preserved. The vegetarian courses were exceptional, and the hospitality from Arun and Yashpal embodied mehman-nawazi: the genuine Indian pleasure in hosting."
+        image="/images/sujan-rajmahal/hero.jpg"
+        imageAlt="Sujan Rajmahal Palace exterior at dusk"
+        slug="sujan-rajmahal-jaipur"
       />
     </div>
   </section>
@@ -68,13 +128,8 @@ import ReviewCard from '../components/ReviewCard.astro';
     margin-bottom: 0.25em;
   }
 
-  .hero-stay {
-    font-weight: 400;
-  }
-
-  .hero-nivas {
-    font-weight: 700;
-  }
+  .hero-stay { font-weight: 400; }
+  .hero-nivas { font-weight: 700; }
 
   .hero-tagline {
     font-family: var(--font-serif);
@@ -83,7 +138,6 @@ import ReviewCard from '../components/ReviewCard.astro';
     color: var(--color-slate);
   }
 
-  /* Founder's Note */
   .founders-note {
     padding: 3rem 0 4rem;
     border-bottom: 1px solid var(--color-warm-sand);
@@ -117,10 +171,7 @@ import ReviewCard from '../components/ReviewCard.astro';
     font-weight: 400;
   }
 
-  /* Reviews Section */
-  .reviews {
-    padding: 0 0 4rem;
-  }
+  .reviews { padding: 0 0 4rem; }
 
   .section-heading {
     font-family: var(--font-serif);

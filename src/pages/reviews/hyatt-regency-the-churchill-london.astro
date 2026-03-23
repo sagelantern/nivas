@@ -1,0 +1,113 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const rating = 5;
+const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+---
+
+<Base title="Hyatt Regency The Churchill, London — Stay Nivas" description="A family stay in Mayfair where the service made a big hotel feel personal, and where traveling with a toddler felt not just possible but genuinely easy.">
+  <article class="review">
+    <div class="review-hero">
+      <img src="/images/hyatt-churchill/hero.jpg" alt="London skyline at dusk, Mayfair" />
+    </div>
+
+    <div class="container">
+      <header class="review-header">
+        <p class="review-location">London, England</p>
+        <h1>Hyatt Regency The Churchill</h1>
+        <p class="review-subtitle">The small touches that make a big hotel feel personal</p>
+        <div class="review-meta-bar">
+          <span class="review-rating" aria-label="5 out of 5 stars">{stars}</span>
+          <span class="review-date">February 2026</span>
+        </div>
+      </header>
+
+      <aside class="review-metadata">
+        <div class="meta-item"><span class="meta-label">Property</span> Hyatt Regency London – The Churchill</div>
+        <div class="meta-item"><span class="meta-label">Location</span> Portman Square, Mayfair, London</div>
+        <div class="meta-item"><span class="meta-label">Room</span> Regency Executive Suite</div>
+        <div class="meta-item"><span class="meta-label">Traveled</span> Family</div>
+        <div class="meta-item"><span class="meta-label">Nights</span> 4</div>
+        <div class="meta-item"><span class="meta-label">Would Return</span> Yes</div>
+      </aside>
+
+      <div class="review-body">
+        <h2>Arrival</h2>
+        <p>
+          The Churchill is not the kind of hotel that makes you gasp when you walk in. There's no nine-story atrium, no lagoon, no jungle. It's a large Mayfair hotel on Portman Square that looks, from the outside, like exactly what it is. What it does instead of dazzling you is something harder and, for a family traveling with a two-year-old, far more valuable: it makes you feel immediately at ease.
+        </p>
+        <p>
+          Juan and Guillaume took care of us before we even arrived. That phrase gets thrown around in hotel reviews, but here it meant something specific: they responded to our emails about the suite setup, the cot, the toddler-proofing, and made decisions on our behalf that turned out to be right. By the time we checked in, the room felt like someone had thought about our family, not just our booking.
+        </p>
+
+        <figure class="review-image">
+          <img src="/images/hyatt-churchill/suite.jpg" alt="Regency Executive Suite with warm lighting and city views" />
+          <figcaption>The suite. Generous enough for a family to spread out without feeling like a convention hall.</figcaption>
+        </figure>
+
+        <h2>The Space</h2>
+        <p>
+          The Regency Executive Suite was a fantastic size for our family. Beautifully set up, very comfortable to spend time in. That last part matters more than people realize, especially when traveling with young children. You need a room you can retreat to at 5pm when the toddler hits the wall, and it needs to feel like a place you want to be, not a holding cell until the next outing.
+        </p>
+        <p>
+          The amenities were great. But what stood out was the housekeeping. The room was cleaned multiple times a day and always felt fresh. With a toddler, the entropy of a hotel room increases hourly. The housekeeping team kept pace with our two-year-old's campaign of creative destruction, and the room never felt anything less than perfect.
+        </p>
+
+        <h2>The People</h2>
+        <p>
+          The service is what makes The Churchill exceptional. Not the building, not the location (though Mayfair is hard to beat), not the suite. The people. From the front desk to the breakfast team to housekeeping to the folks we were emailing with beforehand, everyone was warm, attentive, and genuinely helpful.
+        </p>
+        <p>
+          There's a particular kind of service that matters when you're traveling with a small child: the kind that doesn't make you feel like an inconvenience. Too many luxury hotels treat families as a tolerated exception to their real clientele. The Churchill treats families as the point. Nobody flinched at our son. Nobody gave us that polite smile that means "please control your child." Everyone engaged with him as a small person who belonged there, which he did.
+        </p>
+        <p>
+          There were so many small touches along the way that made the stay feel special. Each one was too minor to describe on its own, but they accumulated into something that felt like genuine care rather than a service checklist.
+        </p>
+
+        <h2>Stillness</h2>
+        <p>
+          London is not a city where you expect to find stillness in a hotel. You expect it to be a base camp. But The Churchill's Mayfair location gave us something unexpected: the ability to walk everywhere we wanted to go while still returning to a place that felt calm. Hyde Park was minutes away. The suite was quiet. The combination meant that our days had a rhythm that felt sustainable rather than exhausting.
+        </p>
+        <p>
+          Traveling with a toddler in a foreign city can feel like a logistics exercise. The Churchill turned it into something closer to a family holiday that happened to be in one of the world's great cities. That's not something the hotel can put on its website. But it's the thing we'll remember most.
+        </p>
+
+        <h2>Would You Return?</h2>
+        <p>
+          Absolutely, and we will. The Churchill is not the most boutique hotel in London or the most design-forward. What it is, is the best hotel we've stayed at for the thing that actually matters to us right now: traveling comfortably as a family with a small child, in a location that makes London accessible, with service that makes you feel known rather than processed.
+        </p>
+        <p>
+          This is for families who want Mayfair without pretension. For parents who want luxury without the anxiety of whether their child is welcome. And for anyone who values service over spectacle, which is the rarest thing a hotel can offer.
+        </p>
+      </div>
+
+      <div class="review-back">
+        <a href="/">&larr; All Reviews</a>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .review-hero { width: 100%; max-height: 70vh; overflow: hidden; }
+  .review-hero img { width: 100%; height: 70vh; object-fit: cover; }
+  .review-header { padding: 3rem 0 2rem; text-align: center; }
+  .review-location { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-slate); margin-bottom: 0.75rem; }
+  .review-header h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 500; margin-bottom: 0.25em; }
+  .review-subtitle { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--color-slate); margin-bottom: 1rem; }
+  .review-meta-bar { display: flex; justify-content: center; gap: 2rem; align-items: center; font-size: 0.85rem; }
+  .review-rating { color: var(--color-saffron); font-size: 1.1rem; letter-spacing: 0.1em; }
+  .review-date { color: var(--color-slate); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+  .review-metadata { max-width: 600px; margin: 0 auto 3rem; padding: 1.5rem; background: rgba(212, 197, 169, 0.15); border-radius: 4px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 2rem; font-size: 0.85rem; }
+  .meta-label { display: block; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-slate); margin-bottom: 0.15em; }
+  .review-body { max-width: 650px; margin: 0 auto; }
+  .review-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; margin: 3rem 0 1rem; color: var(--color-charcoal); }
+  .review-body h2:first-child { margin-top: 0; }
+  .review-body p { font-size: 1rem; line-height: 1.8; }
+  .review-image { margin: 2.5rem -2rem; }
+  .review-image img { width: calc(100% + 4rem); max-width: none; aspect-ratio: 16 / 10; object-fit: cover; }
+  .review-image figcaption { font-size: 0.8rem; color: var(--color-slate); margin-top: 0.5rem; font-style: italic; padding: 0 2rem; }
+  .review-back { max-width: 650px; margin: 4rem auto 0; padding-top: 2rem; border-top: 1px solid var(--color-warm-sand); }
+  .review-back a { font-size: 0.9rem; font-weight: 500; }
+  @media (max-width: 640px) { .review-metadata { grid-template-columns: 1fr; } .review-image { margin: 2rem -1.5rem; } .review-image img { width: calc(100% + 3rem); } .review-image figcaption { padding: 0 1.5rem; } }
+</style>

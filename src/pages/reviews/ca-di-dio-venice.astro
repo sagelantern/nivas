@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const rating = 5;
+const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+---
+
+<Base title="Ca' di Dio, Venice — Stay Nivas" description="One night in Venice that proved a hotel can be both modern and reverent. Ca' di Dio, a VRetreats property, where every small detail was attended to.">
+  <article class="review">
+    <div class="review-hero">
+      <img src="/images/ca-di-dio/hero.jpg" alt="Venice waterfront at golden hour near Ca' di Dio" />
+    </div>
+
+    <div class="container">
+      <header class="review-header">
+        <p class="review-location">Venice, Italy</p>
+        <h1>Ca' di Dio</h1>
+        <p class="review-subtitle">One night that felt like a full stay</p>
+        <div class="review-meta-bar">
+          <span class="review-rating" aria-label="5 out of 5 stars">{stars}</span>
+          <span class="review-date">2023</span>
+        </div>
+      </header>
+
+      <aside class="review-metadata">
+        <div class="meta-item"><span class="meta-label">Property</span> Ca' di Dio, a VRetreats Collection</div>
+        <div class="meta-item"><span class="meta-label">Location</span> Riva degli Schiavoni, Venice</div>
+        <div class="meta-item"><span class="meta-label">Room</span> Lagoon View Room</div>
+        <div class="meta-item"><span class="meta-label">Traveled</span> Couple</div>
+        <div class="meta-item"><span class="meta-label">Nights</span> 1</div>
+        <div class="meta-item"><span class="meta-label">Would Return</span> Yes</div>
+      </aside>
+
+      <div class="review-body">
+        <h2>Arrival</h2>
+        <p>
+          Venice is a city that makes most hotels feel unnecessary. The city itself is the experience, and many properties coast on location alone. Ca' di Dio doesn't coast. It's situated on the Riva degli Schiavoni, facing the lagoon, and from the moment you walk in, you can tell that someone thought carefully about what a modern hotel should feel like inside a very old city.
+        </p>
+        <p>
+          The building is a restored 15th-century hospice. That history could have been played heavy, but the interiors go the other direction: clean lines by Patricia Urquiola, a restrained palette, materials that feel considered rather than decorated. It's one of those places where contemporary design and Venetian context enhance each other instead of competing.
+        </p>
+
+        <figure class="review-image">
+          <img src="/images/ca-di-dio/room.jpg" alt="Modern, light-filled room at Ca' di Dio with lagoon views" />
+          <figcaption>Clean lines, warm materials, and the lagoon doing what it does.</figcaption>
+        </figure>
+
+        <h2>The Space</h2>
+        <p>
+          The room was modern, comfortable, and the views were beautiful. That sounds simple, but in Venice, where many hotel rooms are dark and cramped and trading on the name of the city, it's actually rare. Light came in generously. The bed was excellent. The bathroom felt like it belonged in the room rather than being carved from a closet, which is the standard Venetian hotel experience.
+        </p>
+        <p>
+          What struck us most was the attention to small details. The placement of things. The quality of the linens. The way the room was arranged so that the lagoon view was the natural resting point for your eyes, whether from the bed, the desk, or the bathroom. Someone designed this room for dwelling, not just sleeping.
+        </p>
+
+        <h2>The People</h2>
+        <p>
+          We had one night. Just one. And the team at Ca' di Dio made it feel like we'd been there for a week. Christophe, the General Manager, had the kind of presence that set the tone for the entire property. Filippo and Matteo attended to every detail with a warmth that felt Italian in the best sense: unhurried, generous, and personal.
+        </p>
+        <p>
+          There's a difference between service that follows a script and service that comes from people who genuinely enjoy hosting. Ca' di Dio hires for the latter. We felt taken care of in a way that was neither overbearing nor invisible. Just right. The kind of hospitality that makes you start planning your return before you've checked out.
+        </p>
+
+        <h2>Would You Return?</h2>
+        <p>
+          Absolutely. Ca' di Dio is proof that you don't need a week to know a hotel is exceptional. One night was enough to feel the intention behind every choice: the design, the service, the relationship between the building and the water outside. In a city where hotels often feel interchangeable, this one has a point of view.
+        </p>
+        <p>
+          For couples visiting Venice who want something more considered than a palazzo conversion with tired carpets. For design-minded travelers. For anyone who believes that a single night in the right place can be worth more than a week in the wrong one.
+        </p>
+      </div>
+
+      <div class="review-back">
+        <a href="/">&larr; All Reviews</a>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .review-hero { width: 100%; max-height: 70vh; overflow: hidden; }
+  .review-hero img { width: 100%; height: 70vh; object-fit: cover; }
+  .review-header { padding: 3rem 0 2rem; text-align: center; }
+  .review-location { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-slate); margin-bottom: 0.75rem; }
+  .review-header h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 500; margin-bottom: 0.25em; }
+  .review-subtitle { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--color-slate); margin-bottom: 1rem; }
+  .review-meta-bar { display: flex; justify-content: center; gap: 2rem; align-items: center; font-size: 0.85rem; }
+  .review-rating { color: var(--color-saffron); font-size: 1.1rem; letter-spacing: 0.1em; }
+  .review-date { color: var(--color-slate); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+  .review-metadata { max-width: 600px; margin: 0 auto 3rem; padding: 1.5rem; background: rgba(212, 197, 169, 0.15); border-radius: 4px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 2rem; font-size: 0.85rem; }
+  .meta-label { display: block; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-slate); margin-bottom: 0.15em; }
+  .review-body { max-width: 650px; margin: 0 auto; }
+  .review-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; margin: 3rem 0 1rem; color: var(--color-charcoal); }
+  .review-body h2:first-child { margin-top: 0; }
+  .review-body p { font-size: 1rem; line-height: 1.8; }
+  .review-image { margin: 2.5rem -2rem; }
+  .review-image img { width: calc(100% + 4rem); max-width: none; aspect-ratio: 16 / 10; object-fit: cover; }
+  .review-image figcaption { font-size: 0.8rem; color: var(--color-slate); margin-top: 0.5rem; font-style: italic; padding: 0 2rem; }
+  .review-back { max-width: 650px; margin: 4rem auto 0; padding-top: 2rem; border-top: 1px solid var(--color-warm-sand); }
+  .review-back a { font-size: 0.9rem; font-weight: 500; }
+  @media (max-width: 640px) { .review-metadata { grid-template-columns: 1fr; } .review-image { margin: 2rem -1.5rem; } .review-image img { width: calc(100% + 3rem); } .review-image figcaption { padding: 0 1.5rem; } }
+</style>

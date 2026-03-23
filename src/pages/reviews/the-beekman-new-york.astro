@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const rating = 5;
+const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+---
+
+<Base title="The Beekman, New York — Stay Nivas" description="A staycation at lower Manhattan's most stunning lobby, where the architecture remembers a version of New York that still has something to say.">
+  <article class="review">
+    <div class="review-hero">
+      <img src="/images/the-beekman/hero.jpg" alt="The Beekman Hotel's Victorian atrium in lower Manhattan" />
+    </div>
+
+    <div class="container">
+      <header class="review-header">
+        <p class="review-location">New York, USA</p>
+        <h1>The Beekman</h1>
+        <p class="review-subtitle">A lobby that remembers New York</p>
+        <div class="review-meta-bar">
+          <span class="review-rating" aria-label="5 out of 5 stars">{stars}</span>
+          <span class="review-date">2023</span>
+        </div>
+      </header>
+
+      <aside class="review-metadata">
+        <div class="meta-item"><span class="meta-label">Property</span> The Beekman, A Thompson Hotel by Hyatt</div>
+        <div class="meta-item"><span class="meta-label">Location</span> Lower Manhattan, New York</div>
+        <div class="meta-item"><span class="meta-label">Room</span> King Room</div>
+        <div class="meta-item"><span class="meta-label">Traveled</span> Couple</div>
+        <div class="meta-item"><span class="meta-label">Nights</span> 1</div>
+        <div class="meta-item"><span class="meta-label">Would Return</span> Yes</div>
+      </aside>
+
+      <div class="review-body">
+        <h2>Arrival</h2>
+        <p>
+          There are hotels you book because you need a place to sleep, and there are hotels you book because the building itself is the reason to go. The Beekman is the second kind. You walk through the doors on Nassau Street and into a nine-story Victorian atrium with a pyramidal skylight that makes you stop and look up, which is not something people do often enough in New York.
+        </p>
+        <p>
+          The building was constructed in 1883 as a commercial office tower. It spent decades abandoned. The restoration kept what mattered: the cast-iron balconies, the original turret, the layered history that you can feel in the weight of the place. It's dramatic without being theatrical, which is harder to pull off than it sounds.
+        </p>
+
+        <figure class="review-image">
+          <img src="/images/the-beekman/lobby.jpg" alt="The Beekman's nine-story Victorian atrium with cast-iron balconies" />
+          <figcaption>The atrium. Nine stories of cast iron and the feeling that this building has seen things.</figcaption>
+        </figure>
+
+        <h2>The Space</h2>
+        <p>
+          The room was wonderful. Clean, spacious, well-stocked. Not the largest hotel room in Manhattan, but one that felt cared for. The bed was excellent. The finishes throughout felt intentional: herringbone floors, vintage-inspired fixtures, the kind of details that reward a closer look rather than shouting from across the room.
+        </p>
+        <p>
+          The decor, the restaurants, the bar, the elevators: everything in between was exquisite. That's the thing about The Beekman. It's not just the atrium or the lobby or any single showpiece. It's the consistency of taste from the moment you enter to the moment you leave. Somebody with a strong point of view made every decision in this building, and it shows.
+        </p>
+
+        <h2>Nourishment</h2>
+        <p>
+          The Beekman houses two restaurants worth knowing about. The ground-floor bar is a good place to end an evening. The food program doesn't try to reinvent downtown dining but lands solidly with a menu that fits the setting: classic-leaning, competent, and generous. As vegetarians, we found the options thoughtful rather than token, which is all you can ask for at a hotel restaurant that isn't specifically plant-forward.
+        </p>
+
+        <h2>The People</h2>
+        <p>
+          The service was exceptional, and it started before we arrived. Lauren, Justin, and Alex took care of everything in advance, responding to requests with the kind of attentiveness that made the actual check-in feel like meeting people who already knew us. That pre-arrival care set the tone for the entire stay.
+        </p>
+        <p>
+          Once there, every interaction felt genuine. Not the scripted "welcome back, Mr. Kothari" you get at some hotels. More like a team that was paying attention and responding to what they noticed. That's a harder thing to train, and it suggests a culture that starts at the top.
+        </p>
+
+        <h2>Would You Return?</h2>
+        <p>
+          We'll be back. As New Yorkers, we're spoiled for hotel options, and the bar for a staycation to feel worthwhile is high. The Beekman cleared it easily. The building is stunning, but it's the combination of architecture, service, and attention to detail that makes it more than a pretty lobby.
+        </p>
+        <p>
+          This is for couples looking for a staycation that feels like an event. For visitors who want to stay somewhere that has a relationship with the city's history. For anyone who appreciates a hotel that earned its beauty the hard way: by starting with a 140-year-old building and having the taste to leave the best parts alone.
+        </p>
+      </div>
+
+      <div class="review-back">
+        <a href="/">&larr; All Reviews</a>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .review-hero { width: 100%; max-height: 70vh; overflow: hidden; }
+  .review-hero img { width: 100%; height: 70vh; object-fit: cover; }
+  .review-header { padding: 3rem 0 2rem; text-align: center; }
+  .review-location { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-slate); margin-bottom: 0.75rem; }
+  .review-header h1 { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 500; margin-bottom: 0.25em; }
+  .review-subtitle { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--color-slate); margin-bottom: 1rem; }
+  .review-meta-bar { display: flex; justify-content: center; gap: 2rem; align-items: center; font-size: 0.85rem; }
+  .review-rating { color: var(--color-saffron); font-size: 1.1rem; letter-spacing: 0.1em; }
+  .review-date { color: var(--color-slate); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+  .review-metadata { max-width: 600px; margin: 0 auto 3rem; padding: 1.5rem; background: rgba(212, 197, 169, 0.15); border-radius: 4px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 2rem; font-size: 0.85rem; }
+  .meta-label { display: block; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-slate); margin-bottom: 0.15em; }
+  .review-body { max-width: 650px; margin: 0 auto; }
+  .review-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; margin: 3rem 0 1rem; color: var(--color-charcoal); }
+  .review-body h2:first-child { margin-top: 0; }
+  .review-body p { font-size: 1rem; line-height: 1.8; }
+  .review-image { margin: 2.5rem -2rem; }
+  .review-image img { width: calc(100% + 4rem); max-width: none; aspect-ratio: 16 / 10; object-fit: cover; }
+  .review-image figcaption { font-size: 0.8rem; color: var(--color-slate); margin-top: 0.5rem; font-style: italic; padding: 0 2rem; }
+  .review-back { max-width: 650px; margin: 4rem auto 0; padding-top: 2rem; border-top: 1px solid var(--color-warm-sand); }
+  .review-back a { font-size: 0.9rem; font-weight: 500; }
+  @media (max-width: 640px) { .review-metadata { grid-template-columns: 1fr; } .review-image { margin: 2rem -1.5rem; } .review-image img { width: calc(100% + 3rem); } .review-image figcaption { padding: 0 1.5rem; } }
+</style>
