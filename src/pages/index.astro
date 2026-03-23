@@ -31,10 +31,12 @@ import ReviewCard from '../components/ReviewCard.astro';
           <div class="note-author-info">
             <p class="note-sign">Yash Kothari</p>
             <p class="note-bio">
-              Indian-American founder and writer based in New York. Wharton grad, Y Combinator alum, two startups built. Writes about hospitality through the lens of feeling, presence, and the Indian tradition of <em>atithi devo bhava</em>.
+              Indian-American founder and writer based in New York. Forbes contributor, with work published in The Wall Street Journal and The New York Times. Wharton grad, Y Combinator alum. Writes about hospitality through the lens of feeling, presence, and the Indian tradition of <em>atithi devo bhava</em>.
             </p>
             <p class="note-links">
               <a href="https://www.linkedin.com/in/yashkothari/" target="_blank" rel="noopener">LinkedIn</a>
+              <span class="link-sep">&middot;</span>
+              <a href="/media">Media &amp; Contact</a>
             </p>
           </div>
         </div>
@@ -144,6 +146,25 @@ import ReviewCard from '../components/ReviewCard.astro';
       />
     </div>
   </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <h2 class="newsletter-heading">Stay in touch</h2>
+        <p class="newsletter-copy">New reviews delivered to your inbox. No spam, no affiliate links, just honest writing about places worth knowing.</p>
+        <form class="newsletter-form" action="https://formsubmit.co/yash@staynivas.com" method="POST">
+          <input type="hidden" name="_subject" value="New Stay Nivas subscriber" />
+          <input type="hidden" name="_template" value="basic" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" />
+          <input type="hidden" name="_next" value="https://staynivas.com/?subscribed=true" />
+          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input" />
+          <button type="submit" class="newsletter-button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
 </Base>
 
 <style>
@@ -227,6 +248,89 @@ import ReviewCard from '../components/ReviewCard.astro';
   }
 
   .reviews { padding: 0 0 4rem; }
+
+  .link-sep {
+    margin: 0 0.5em;
+    color: var(--color-warm-sand);
+  }
+
+  /* Newsletter */
+  .newsletter {
+    padding: 4rem 0;
+    border-top: 1px solid var(--color-warm-sand);
+  }
+
+  .newsletter-inner {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .newsletter-heading {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+
+  .newsletter-copy {
+    font-size: 0.9rem;
+    color: var(--color-slate);
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-warm-sand);
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    background: white;
+    color: var(--color-charcoal);
+  }
+
+  .newsletter-input:focus {
+    outline: none;
+    border-color: var(--color-saffron);
+  }
+
+  .newsletter-input::placeholder {
+    color: var(--color-warm-sand);
+  }
+
+  .newsletter-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--color-saffron);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .newsletter-button:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 480px) {
+    .newsletter-form {
+      flex-direction: column;
+    }
+  }
 
   .section-heading {
     font-family: var(--font-serif);

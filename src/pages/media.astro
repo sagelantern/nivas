@@ -1,0 +1,238 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Media & Contact — Stay Nivas" description="Press inquiries, property partnerships, and contact information for Stay Nivas.">
+  <section class="media-page">
+    <div class="container">
+      <header class="media-header">
+        <h1>Media & Contact</h1>
+        <p class="media-subtitle">For press inquiries, property partnerships, and general questions.</p>
+      </header>
+
+      <div class="media-content">
+        <div class="media-section">
+          <h2>About Stay Nivas</h2>
+          <p>
+            Stay Nivas is a hospitality journal reviewing boutique and design-forward hotels through the lens of feeling, presence, and cultural depth. Founded by Yash Kothari, it offers honest, editorial-quality reviews shaped by an Indian-American perspective on what true hospitality means.
+          </p>
+          <p>
+            Reviews are independent, unsponsored, and never influenced by complimentary stays or affiliate relationships.
+          </p>
+        </div>
+
+        <div class="media-section">
+          <h2>About Yash Kothari</h2>
+          <p>
+            Yash Kothari is an Indian-American founder, writer, and Forbes contributor based in New York City. His work has been published in The Wall Street Journal and The New York Times. A Wharton graduate and Y Combinator alum, he has founded two technology companies and serves as Senior VP at Pioneer Fund.
+          </p>
+          <p>
+            He writes about hospitality through the framework of <em>atithi devo bhava</em>, the Indian philosophy that the guest is sacred, examining how the world's best properties embody or fall short of that ideal.
+          </p>
+          <p class="media-links">
+            <a href="https://www.linkedin.com/in/yashkothari/" target="_blank" rel="noopener">LinkedIn</a>
+          </p>
+        </div>
+
+        <div class="media-section">
+          <h2>Property Partnerships</h2>
+          <p>
+            Stay Nivas welcomes invitations to experience properties for review. All reviews are editorially independent regardless of how a stay is arranged. We do not accept payment for coverage, and we do not guarantee favorable reviews.
+          </p>
+          <p>
+            If you manage a property you believe aligns with the Stay Nivas lens, we'd welcome the conversation.
+          </p>
+        </div>
+
+        <div class="media-section">
+          <h2>Get in Touch</h2>
+          <p>
+            For press inquiries, partnership proposals, or general questions, use the form below.
+          </p>
+
+          <form class="contact-form" action="https://formsubmit.co/yash@staynivas.com" method="POST">
+            <input type="hidden" name="_subject" value="Stay Nivas inquiry" />
+            <input type="hidden" name="_template" value="basic" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" />
+            <input type="hidden" name="_next" value="https://staynivas.com/media?sent=true" />
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="organization">Organization / Property</label>
+              <input type="text" id="organization" name="organization" />
+            </div>
+
+            <div class="form-group">
+              <label for="type">Inquiry Type</label>
+              <select id="type" name="type" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="press">Press Inquiry</option>
+                <option value="partnership">Property Partnership</option>
+                <option value="general">General Question</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="media-back">
+        <a href="/">&larr; Back to Reviews</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .media-page {
+    padding: 4rem 0;
+  }
+
+  .media-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .media-header h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+
+  .media-subtitle {
+    font-size: 0.95rem;
+    color: var(--color-slate);
+  }
+
+  .media-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .media-section {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--color-warm-sand);
+  }
+
+  .media-section:last-child {
+    border-bottom: none;
+  }
+
+  .media-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .media-section p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+  }
+
+  .media-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Contact Form */
+  .contact-form {
+    margin-top: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-slate);
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-warm-sand);
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-charcoal);
+    background: white;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-saffron);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-group select {
+    appearance: auto;
+  }
+
+  .submit-button {
+    padding: 0.85rem 2rem;
+    background: var(--color-saffron);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    width: 100%;
+  }
+
+  .submit-button:hover {
+    opacity: 0.9;
+  }
+
+  .media-back {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    padding-top: 2rem;
+  }
+
+  .media-back a {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+</style>
