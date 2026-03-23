@@ -29,6 +29,7 @@ const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
     <p class="review-card-subtitle">{subtitle}</p>
     <div class="review-card-rating" aria-label={`${rating} out of 5 stars`}>{stars}</div>
     <p class="review-card-summary">{summary}</p>
+    <span class="review-card-readmore">Read the review &rarr;</span>
   </div>
 </a>
 
@@ -108,5 +109,12 @@ const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
     line-height: 1.7;
     color: var(--color-slate);
     max-width: 65ch;
+  }
+
+  .review-card-readmore {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-saffron);
+    letter-spacing: 0.02em;
   }
 </style>
