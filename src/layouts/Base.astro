@@ -25,6 +25,7 @@ const { title, description = "A hospitality journal reviewing boutique hotels th
         <nav>
           <a href="/#reviews">Reviews</a>
           <a href="/media">Media</a>
+          <a href="/#subscribe" class="nav-cta">Subscribe</a>
         </nav>
       </div>
     </header>
@@ -93,6 +94,21 @@ const { title, description = "A hospitality journal reviewing boutique hotels th
     color: var(--color-slate);
     text-transform: uppercase;
     letter-spacing: 0.08em;
+  }
+
+  nav .nav-cta {
+    background: var(--color-saffron);
+    color: white;
+    padding: 0.45rem 1rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+
+  nav .nav-cta:hover {
+    opacity: 0.9;
+    color: white;
   }
 
   .site-footer {
