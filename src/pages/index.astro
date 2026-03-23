@@ -177,6 +177,14 @@ import ReviewCard from '../components/ReviewCard.astro';
   .hero {
     padding: 6rem 0 3rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-title {
@@ -194,6 +202,8 @@ import ReviewCard from '../components/ReviewCard.astro';
     font-style: italic;
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     color: var(--color-slate);
+    max-width: none;
+    margin-bottom: 0;
   }
 
   .founders-note {
