@@ -1,0 +1,117 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "A hospitality journal reviewing boutique hotels through the lens of feeling, presence, and cultural depth." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wide-container">
+        <a href="/" class="logo">
+          <span class="logo-stay">Stay</span> <span class="logo-nivas">Nivas</span>
+        </a>
+        <nav>
+          <a href="/#reviews">Reviews</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-logo">
+          <span class="logo-stay">Stay</span> <span class="logo-nivas">Nivas</span>
+        </p>
+        <p class="footer-tagline">Where you dwell matters.</p>
+        <p class="footer-copy">&copy; {new Date().getFullYear()} Stay Nivas</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
+
+<style>
+  .site-header {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-warm-sand);
+  }
+
+  .site-header .wide-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-charcoal);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .logo:hover {
+    opacity: 1;
+  }
+
+  .logo-stay {
+    font-weight: 400;
+  }
+
+  .logo-nivas {
+    font-weight: 700;
+  }
+
+  nav a {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-slate);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .site-footer {
+    margin-top: 6rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--color-warm-sand);
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    margin-bottom: 0.25em;
+  }
+
+  .footer-tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-slate);
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+    color: var(--color-slate);
+  }
+</style>

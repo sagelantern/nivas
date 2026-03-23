@@ -1,0 +1,136 @@
+---
+import Base from '../layouts/Base.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+---
+
+<Base title="Stay Nivas — Where You Dwell Matters">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">
+        <span class="hero-stay">Stay</span> <span class="hero-nivas">Nivas</span>
+      </h1>
+      <p class="hero-tagline">Where you dwell matters.</p>
+    </div>
+  </section>
+
+  <!-- Founder's Note -->
+  <section class="founders-note">
+    <div class="container">
+      <div class="note-content">
+        <p>
+          I stopped trusting hotel reviews the day I realized they were all answering the wrong question. Thread count, pool temperature, breakfast buffet variety. Useful, sure. But not why I remember the places I remember.
+        </p>
+        <p>
+          The hotels that stayed with me did something else. They changed the rhythm of my day. They made me notice things I normally walk past. They understood something about rest that goes deeper than a good mattress.
+        </p>
+        <p>
+          Stay Nivas is my attempt to write about that. Not what a hotel has, but what it does to you. The reviews here are personal, sometimes imperfect, and always honest. If a place earned my attention, I'll tell you why. If it didn't, I'll tell you that too.
+        </p>
+        <p class="note-sign">
+          Yash Kothari<br />
+          <span class="note-title">Founder, Stay Nivas</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2 class="section-heading">Reviews</h2>
+
+      <ReviewCard
+        title="Andaz Peninsula Papagayo"
+        subtitle="Where the jungle decides what kind of guest you'll be"
+        location="Guanacaste, Costa Rica"
+        date="March 2026"
+        rating={4}
+        summary="The Andaz Papagayo doesn't greet you so much as absorb you. You drive through miles of dry tropical forest, past howler monkeys and security gates, and arrive at an open-air lobby where the Pacific announces itself before the front desk does. This is a property that understood its assignment: get out of nature's way, then make you comfortable while it works on you. Not everything lands perfectly, but what it gets right, it gets deeply right."
+        image="/images/andaz-papagayo/hero.jpg"
+        imageAlt="View of Culebra Bay from the Andaz Papagayo resort through tropical foliage"
+        slug="andaz-peninsula-papagayo"
+      />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding: 6rem 0 3rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 8vw, 5rem);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.25em;
+  }
+
+  .hero-stay {
+    font-weight: 400;
+  }
+
+  .hero-nivas {
+    font-weight: 700;
+  }
+
+  .hero-tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: var(--color-slate);
+  }
+
+  /* Founder's Note */
+  .founders-note {
+    padding: 3rem 0 4rem;
+    border-bottom: 1px solid var(--color-warm-sand);
+    margin-bottom: 4rem;
+  }
+
+  .note-content {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--color-saffron);
+  }
+
+  .note-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+  }
+
+  .note-sign {
+    margin-top: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  .note-title {
+    font-size: 0.85rem;
+    color: var(--color-slate);
+    font-weight: 400;
+  }
+
+  /* Reviews Section */
+  .reviews {
+    padding: 0 0 4rem;
+  }
+
+  .section-heading {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-slate);
+    margin-bottom: 3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-warm-sand);
+  }
+</style>

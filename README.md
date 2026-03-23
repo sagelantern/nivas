@@ -4,27 +4,47 @@ A hospitality journal reviewing boutique and design-forward hotels through the l
 
 **Domain:** staynivas.com (Cloudflare Pages)
 
+## Development
+
+```bash
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # Build to dist/
+npm run preview  # Preview built site
+```
+
 ## Documentation
 
-- [Brand Style Guide](docs/STYLE-GUIDE.md) — visual identity, colors, typography, photography, layout
-- [Editorial Guide](docs/EDITORIAL-GUIDE.md) — review structure, writing principles, voice
-- [GM Strategy](docs/GM-STRATEGY.md) — relationship building with general managers (internal)
-- [About Page Copy](docs/ABOUT-PAGE-COPY.md) — draft copy for the site's about page
+- [Brand Style Guide](docs/STYLE-GUIDE.md)
+- [Editorial Guide](docs/EDITORIAL-GUIDE.md)
+- [GM Strategy](docs/GM-STRATEGY.md)
 
 ## Tech Stack
 
-TBD — likely a static site generator (Astro, Hugo, or 11ty) deployed to Cloudflare Pages.
+- [Astro](https://astro.build) static site generator
+- Deployed to Cloudflare Pages
+- Cormorant Garamond + Inter typography
+- No JavaScript on the client (pure static HTML/CSS)
 
 ## Content Structure
 
 ```
-content/
-  reviews/
-    YYYY-MM-DD-property-slug.md
+src/
   pages/
-    about.md
-assets/
+    index.astro              # Homepage with founder's note + review cards
+    reviews/
+      [property-slug].astro  # Individual review pages
+  layouts/
+    Base.astro               # Shared layout
+  components/
+    ReviewCard.astro         # Review card for homepage
+  styles/
+    global.css               # Brand tokens + base styles
+public/
   images/
-    property-slug/
-      descriptor.jpg
+    [property-slug]/         # Photos per property
+docs/
+  STYLE-GUIDE.md
+  EDITORIAL-GUIDE.md
+  GM-STRATEGY.md
 ```
