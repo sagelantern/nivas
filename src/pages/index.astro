@@ -14,6 +14,25 @@ import ReviewCard from '../components/ReviewCard.astro';
     </div>
   </section>
 
+  <!-- Newsletter -->
+  <section class="newsletter" id="subscribe">
+    <div class="container">
+      <div class="newsletter-inner">
+        <h2 class="newsletter-heading">Stay in touch</h2>
+        <p class="newsletter-copy">Join a growing community of travelers who care more about character than thread counts. New reviews delivered to your inbox.</p>
+        <form class="newsletter-form" action="https://formsubmit.co/kothari.s.yash@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Stay Nivas subscriber" />
+          <input type="hidden" name="_template" value="basic" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" />
+          <input type="hidden" name="_next" value="https://staynivas.com/?subscribed=true" />
+          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input" />
+          <button type="submit" class="newsletter-button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- Founder's Note -->
   <section class="founders-note">
     <div class="container">
@@ -153,24 +172,6 @@ import ReviewCard from '../components/ReviewCard.astro';
     </div>
   </section>
 
-  <!-- Newsletter -->
-  <section class="newsletter" id="subscribe">
-    <div class="container">
-      <div class="newsletter-inner">
-        <h2 class="newsletter-heading">Stay in touch</h2>
-        <p class="newsletter-copy">New reviews delivered to your inbox. No spam, no affiliate links, just honest writing about places worth knowing.</p>
-        <form class="newsletter-form" action="https://formsubmit.co/kothari.s.yash@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Stay Nivas subscriber" />
-          <input type="hidden" name="_template" value="basic" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="_honey" style="display:none" />
-          <input type="hidden" name="_next" value="https://staynivas.com/?subscribed=true" />
-          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input" />
-          <button type="submit" class="newsletter-button">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  </section>
 </Base>
 
 <style>
@@ -301,8 +302,9 @@ import ReviewCard from '../components/ReviewCard.astro';
 
   /* Newsletter */
   .newsletter {
-    padding: 4rem 0;
-    border-top: 1px solid var(--color-warm-sand);
+    padding: 2rem 0 3rem;
+    border-bottom: 1px solid var(--color-warm-sand);
+    margin-bottom: 0;
   }
 
   .newsletter-inner {
