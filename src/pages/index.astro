@@ -14,25 +14,6 @@ import ReviewCard from '../components/ReviewCard.astro';
     </div>
   </section>
 
-  <!-- Newsletter -->
-  <section class="newsletter" id="subscribe">
-    <div class="container">
-      <div class="newsletter-inner">
-        <h2 class="newsletter-heading">Stay in touch</h2>
-        <p class="newsletter-copy">Join a growing community of travelers who care more about how a place feels than how it looks on paper. New reviews delivered to your inbox.</p>
-        <form class="newsletter-form" action="https://formsubmit.co/kothari.s.yash@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Stay Nivas subscriber" />
-          <input type="hidden" name="_template" value="basic" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="_honey" style="display:none" />
-          <input type="hidden" name="_next" value="https://staynivas.com/?subscribed=true" />
-          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input" />
-          <button type="submit" class="newsletter-button">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
   <!-- Founder's Note -->
   <section class="founders-note">
     <div class="container">
@@ -65,6 +46,25 @@ import ReviewCard from '../components/ReviewCard.astro';
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter" id="subscribe">
+    <div class="container">
+      <div class="newsletter-inner">
+        <h2 class="newsletter-heading">Stay in touch</h2>
+        <p class="newsletter-copy">Join a growing community of travelers who care more about how a place feels than how it looks on paper. New reviews delivered to your inbox.</p>
+        <form class="newsletter-form" action="https://formsubmit.co/kothari.s.yash@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Stay Nivas subscriber" />
+          <input type="hidden" name="_template" value="basic" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" />
+          <input type="hidden" name="_next" value="https://staynivas.com/?subscribed=true" />
+          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input" />
+          <button type="submit" class="newsletter-button">Subscribe</button>
+        </form>
       </div>
     </div>
   </section>
