@@ -50,25 +50,6 @@ import ReviewCard from '../components/ReviewCard.astro';
     </div>
   </section>
 
-  <!-- Newsletter -->
-  <section class="newsletter" id="subscribe">
-    <div class="container">
-      <div class="newsletter-inner">
-        <h2 class="newsletter-heading">Stay in touch</h2>
-        <p class="newsletter-copy">Join a growing community of travelers who care more about how a place feels than how it looks on paper. New reviews delivered to your inbox.</p>
-        <form class="newsletter-form" action="https://formsubmit.co/kothari.s.yash@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Stay Nivas subscriber" />
-          <input type="hidden" name="_template" value="basic" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="_honey" style="display:none" />
-          <input type="hidden" name="_next" value="https://staynivas.com/?subscribed=true" />
-          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input" />
-          <button type="submit" class="newsletter-button">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
   <!-- Reviews -->
   <section class="reviews" id="reviews">
     <div class="container">
@@ -98,6 +79,31 @@ import ReviewCard from '../components/ReviewCard.astro';
         slug="andaz-peninsula-papagayo"
       />
 
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter" id="subscribe">
+    <div class="container">
+      <div class="newsletter-inner">
+        <h2 class="newsletter-heading">Stay in touch</h2>
+        <p class="newsletter-copy">Join a growing community of travelers who care more about how a place feels than how it looks on paper. New reviews delivered to your inbox.</p>
+        <form class="newsletter-form" action="https://formsubmit.co/kothari.s.yash@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Stay Nivas subscriber" />
+          <input type="hidden" name="_template" value="basic" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" />
+          <input type="hidden" name="_next" value="https://staynivas.com/?subscribed=true" />
+          <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input" />
+          <button type="submit" class="newsletter-button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Reviews -->
+  <section class="reviews reviews-continued">
+    <div class="container">
       <ReviewCard
         title="The Oberoi, Mumbai"
         subtitle="The quiet authority of a hotel that has nothing left to prove"
@@ -292,6 +298,7 @@ import ReviewCard from '../components/ReviewCard.astro';
   }
 
   .reviews { padding: 0 0 4rem; }
+  .reviews-continued { padding-top: 0; }
 
   .link-sep {
     margin: 0 0.5em;
@@ -300,14 +307,17 @@ import ReviewCard from '../components/ReviewCard.astro';
 
   /* Newsletter */
   .newsletter {
-    padding: 1.5rem 0 3.5rem;
-    margin-bottom: 0;
+    padding: 3rem 0;
+    margin: 1rem 0;
   }
 
   .newsletter-inner {
     max-width: 480px;
     margin: 0 auto;
     text-align: center;
+    border: 1px solid var(--color-warm-sand);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
   }
 
   .newsletter-heading {
