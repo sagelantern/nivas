@@ -38,10 +38,13 @@ const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
     display: block;
     text-decoration: none;
     color: inherit;
-    border-bottom: 1px solid var(--color-warm-sand);
     padding-bottom: 3rem;
     margin-bottom: 3rem;
     transition: transform 0.2s ease;
+  }
+
+  .review-card:not(:last-child) {
+    border-bottom: 1px solid var(--color-warm-sand);
   }
 
   .review-card:hover {
