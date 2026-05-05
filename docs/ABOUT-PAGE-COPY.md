@@ -18,6 +18,6 @@ Every review is a single stay, written with care. No star ratings, no affiliate 
 
 ## About Yash
 
-Yash Kothari is a writer and traveler based in New York City. Born in India, educated at Wharton, shaped by a decade in technology and a deepening meditation practice. He travels with his family and writes about the places that earn a second visit.
+Yash Kothari is a writer and traveler based in New York City. Born in India, a Wharton undergrad, shaped by a decade in technology and a deepening meditation practice. He travels with his family and writes about the places that earn a second visit.
 
 He can be reached at yash@staynivas.com.
